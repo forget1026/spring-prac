@@ -13,23 +13,23 @@ public class Student {
         return studentID;
     }
 
-    public String getStudentName() {
-        return studentName;
-    }
-
     public void setStudentID(int studentID) {
         this.studentID = studentID;
+    }
+
+    public String getStudentName() {
+        return studentName;
     }
 
     public void setStudentName(String studentName) {
         this.studentName = studentName;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public String getAddress() {
         return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
