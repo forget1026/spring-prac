@@ -1,4 +1,4 @@
-package com.Chapter3.ch04;
+package com.Chapter3.ch06;
 
 public class Customer {
     protected int customerID;

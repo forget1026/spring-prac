@@ -1,5 +1,6 @@
-package com.Chapter3.ch06;
+package com.Chapter3.ch08;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 class Animal {
@@ -47,7 +48,7 @@ public class AnimalTest {
         Animal animalTiger = new Tiger();
         Animal animalEagle = new Eagle();
 
-//        AnimalTest test = new AnimalTest();
+        AnimalTest test = new AnimalTest();
 //        test.moveAnimal(animalHuman);
 //        test.moveAnimal(animalTiger);
 //        test.moveAnimal(animalEagle);
@@ -57,8 +58,28 @@ public class AnimalTest {
         animalList.add(animalTiger);
         animalList.add(animalEagle);
 
-        for(Animal animal : animalList) {
-            animal.move();
+//        for(Animal animal : animalList) {
+//            animal.move();
+//        }
+
+        test.testDownCasting(animalList);
+    }
+
+    public void testDownCasting(ArrayList<Animal> list) {
+        for(int i = 0; i < list.size(); i++) {
+            Animal animal = list.get(i);
+            if (animal instanceof Human) {
+                Human human = (Human) list.get(i);
+                human.readBook();
+            } else if (animal instanceof Tiger) {
+                Tiger tiger = (Tiger) list.get(i);
+                tiger.hunting();
+            } else if (animal instanceof Eagle) {
+                Eagle eagle = (Eagle) list.get(i);
+                eagle.flying();
+            } else {
+                System.out.println("unsupported Type");
+            }
         }
     }
 

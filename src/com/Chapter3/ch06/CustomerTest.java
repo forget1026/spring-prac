@@ -1,19 +1,36 @@
-package com.Chapter3.ch04;
+package com.Chapter3.ch06;
+
+import java.util.ArrayList;
 
 public class CustomerTest {
     public static void main(String[] args) {
-        Customer customerLee = new Customer(10010, "이순신");
-        customerLee.bonusPoint = 1000;
-        int price = customerLee.calcPrice(1000);
-        System.out.println(customerLee.showCustomerInfo() + price);
+        ArrayList<Customer> customerList = new ArrayList<>();
 
-        Customer customerKim = new VIPCustomer(10020, "김유신");
-        customerKim.bonusPoint = 10000;
-        price = customerKim.calcPrice(1000);
-        System.out.println(customerKim.showCustomerInfo() + price);
+        Customer customerT = new Customer(10010, "Tomas");
+        Customer customerJ = new Customer(10020, "James");
+        Customer customerE = new GoldCustomer(10030, "Edward");
+        Customer customerP = new GoldCustomer(10040, "Percy");
+        Customer customerK = new VIPCustomer(10050, "Kim");
 
-        Customer vc = new VIPCustomer(12345, "no-name");
-        price = vc.calcPrice(1000);
-        System.out.println(price);
+        customerList.add(customerT);
+        customerList.add(customerJ);
+        customerList.add(customerE);
+        customerList.add(customerP);
+        customerList.add(customerK);
+
+//        for(Customer customer : customerList) {
+//            System.out.println(customer.showCustomerInfo());
+//        }
+
+//        int price = 1000;
+//        for(Customer customer : customerList) {
+//            int cost = customer.calcPrice(price);
+//            System.out.println(customer.getCustomerName() + "님이 " + cost + "원 지불하셨습니다." );
+//            System.out.println(customer.getCustomerName() + "님의 현재 보너스 포인트는 " + customer.bonusPoint + " 입니다.");
+//        }
+        if (customerE instanceof GoldCustomer) {
+            GoldCustomer vc = (GoldCustomer) customerE;
+            System.out.println(vc.showCustomerInfo());
+        }
     }
 }

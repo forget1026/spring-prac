@@ -1,4 +1,4 @@
-package com.Chapter3.ch04;
+package com.Chapter3.ch06;
 
 public class VIPCustomer extends Customer {
     double salesRatio;
@@ -8,7 +8,7 @@ public class VIPCustomer extends Customer {
         super(0, "no-name");
 
         bonusRatio = 0.05;
-        salesRatio = 0.01;
+        salesRatio = 0.1;
         customerGrade = "VIP";
     }
 
@@ -16,7 +16,7 @@ public class VIPCustomer extends Customer {
         super(customerID, customerName);
 
         bonusRatio = 0.05;
-        salesRatio = 0.01;
+        salesRatio = 0.1;
         customerGrade = "VIP";
     }
 

@@ -1,2 +1,8 @@
-package com.Chapter3.ch09;public class MyNoteBook {
+package com.Chapter3.ch09;
+
+public class MyNoteBook extends NoteBook {
+    @Override
+    public void typing() {
+        System.out.println("MyNotebook typing");
+    }
 }
