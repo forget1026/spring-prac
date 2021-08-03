@@ -1,11 +1,11 @@
 package com.Chapter5.ch04;
 
-public class MyLinkdList {
+public class MyLinkedList {
 
     private MyListNode head;
     int count;
 
-    public MyLinkdList() {
+    public MyLinkedList() {
         head = null;
         count = 0;
     }
@@ -127,4 +127,13 @@ public class MyLinkdList {
     }
 
 
+    public int getSize() {
+        return count;
+    }
+
+    public void removeAll() {
+        head = null;
+        count = 0;
+
+    }
 }
