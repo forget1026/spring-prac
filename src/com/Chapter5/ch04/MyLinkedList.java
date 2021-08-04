@@ -134,6 +134,9 @@ public class MyLinkedList {
     public void removeAll() {
         head = null;
         count = 0;
+    }
 
+    public boolean isEmpty() {
+        return count == 0;
     }
 }
